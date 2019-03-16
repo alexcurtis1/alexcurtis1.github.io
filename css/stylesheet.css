@@ -14,13 +14,19 @@ h1, h2, h3, h4, h5
 
 /* Nav Arrows */
 
-.bottomArrow {
+.bottomArrow
+{
   transform: rotate(-90deg);
   width: 42px;
   height: 42px;
   position: absolute;
   z-index: 2;
   bottom: 0;
+}
+
+.bottomArrow
+{
+  fill: #FFF;
 }
 
 /* Navbar CSS */
@@ -212,6 +218,11 @@ a:hover
     margin-bottom: 5%;
   }
 
+  .bottomArrow polygon
+  {
+    fill: #000;
+  }
+
   /* About */
 
   .about img
@@ -250,13 +261,15 @@ a:hover
   }
 
   /* Projects */
-  .flip-card
+
+  .projects .container-fluid
   {
-    margin-top: 15.5%;
+    overflow-y:scroll;
   }
 
   .flip-card
   {
+    margin-top: 15.5%;
     height: 250px;
     width: 250px;
   }
