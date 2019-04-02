@@ -1,1 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gym Calculators</title>
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="public/css/stylesheet.css">
+</head>
+<ul class="nav nav-tabs row justify-content-center bg-primary">
+  <li class="nav-item col-lg-3"><a class="nav-link active" data-toggle="tab" href="#bmi">BMI Calculator</a></li>
+  <li class="nav-item col-lg-3"><a class="nav-link" data-toggle="tab" href="#bftape">BodyFat Calculator(Tape)</a></li>
+  <li class="nav-item col-lg-3"><a class="nav-link" data-toggle="tab" href="#bfcalipers">BodyFat Calculator(Calipers)</a></li>
+</ul>
 
+<div class="tab-content row justify-content-center">
+  <div id="bmi" class="tab-pane active in">
+    <!-- BMI Calculator Content -->
+    <div class="card mx-xl-5">
+      <div class="card-body shadow">
+        <form action="/bmi" method="post">
+          <p class="h4 text-center py-4">BMI Calculator</p>
+          <select class="browser-default custom-select" name="measurement">
+            <option value="Metric" selected>Metric</option>
+            <option value="Imperial">Imperial</option>
+          </select>
+          <div class="row justify-content-center"><label>Height</label></div>
+          <div class="form-group row justify-content-center">
+            <input type="number" class="form-control" name="meters" placeholder="Meters (m)" required>
+          </div>
+          <div class="row justify-content-center"><label>Weight</label></div>
+          <div class="form-group row justify-content-center">
+            <input type="number" class="form-control" name="kilograms" placeholder="Kilograms (kg)" required>
+          </div>
+          <button class="btn btn-outline-success col-lg-12" type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div id="bftape" class="tab-pane fade">
+    <!-- BodyFat Tape Calculator -->
+    <div class="card mx-xl-5">
+      <div class="card-body shadow">
+        <form action="/tape" method="post">
+          <p class="h4 text-center py-4">BodyFat Calculator (Tape)</p>
+          <select name="formula" class="browser-default custom-select col-lg-8">
+            <option selected>YMCA Formula</option>
+            <option></option>
+          </select>
+          <div class="form-group row justify-content-center">
+            <select name="gender" class="browser-default custom-select">
+              <option selected>Male</option>
+              <option>Female</option>
+            </select>
+          </div>
+          <div class="form-group row justify-content-center">
+            <input type="number" class="form-control" name="lb" placeholder="Weight: Pounds (lb)" required>
+          </div>
+          <div class="form-group row justify-content-center">
+            <input type="number" class="form-control" name="inches" placeholder="Height: Inches (in)" required>
+          </div>
+          <button class="btn btn-outline-success col-lg-12" type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div id="bfcalipers" class="tab-pane fade">
+    <h4>BodyFat Calculator (Calipers)</h4>
+  </div>
+</div>
+<!-- Script Files -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src ="public/js/jquery.js"></script>
+</body>
+</html>

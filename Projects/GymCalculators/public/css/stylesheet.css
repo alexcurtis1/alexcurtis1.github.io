@@ -1,0 +1,39 @@
+body
+{
+  overflow: hidden;
+  color: #000;
+}
+
+ul, li, a
+{
+  text-decoration: none;
+  list-style-type: none;
+  color: #FFF;
+}
+
+input
+{
+  margin-bottom: 10%;
+}
+
+select
+{
+  margin-top: -5%;
+  margin-bottom: 10%;
+}
+
+p
+{
+  margin-top: -10%;
+}
+
+.tab-content
+{
+  text-align: center;
+  margin-top: 5%;
+}
+
+.form-group
+{
+  margin: 0.5%;
+}
